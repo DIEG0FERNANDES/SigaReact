@@ -1,0 +1,38 @@
+/* controla o conteudo da pagina */
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+/* controla estilização do perfil */
+.perfil {
+  text-align: center;
+}
+.perfil > IoImage {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.foto {
+  font-size: 100px;
+  padding: 5px;
+  background-color: #474747;
+  border: 1px solid #000;
+  border-radius: 60px;
+}
+/* arrow up */
+.irTopo {
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+  color: green;
+}
+/* responsividade da pagina */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
