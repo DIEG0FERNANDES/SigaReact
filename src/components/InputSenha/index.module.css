@@ -1,0 +1,49 @@
+/* Estilização do container */
+.senhaContainer {
+  padding: 8px;
+  background-color: white;
+}
+
+/* Estilização do botão Eye */
+.senhaButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--dark-color);
+  margin-left: 5px;
+  transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.senhaButton:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+/* Estilização dos labels */
+.cadastroForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: bold;
+}
+
+/* Estilização do select */
+.select {
+  padding: 8px;
+  border: 1px solid var(--dark-color);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+/* Estilização do símbolo de obrigatoriedade */
+.required {
+  color: red;
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+/* Estilização dos labels */
+.form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

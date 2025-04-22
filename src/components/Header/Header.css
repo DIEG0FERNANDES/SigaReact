@@ -10,7 +10,7 @@ header {
   align-items: center;
 }
 
-h1 {
+h2 {
   padding: 5%;
   margin: 0;
   font-family: "regular";
@@ -19,4 +19,15 @@ h1 {
   align-self: flex-end;
   padding: 10px;
   font-size: 1.5rem;
+}
+
+/* Estilização do botão Eye */
+.senhaButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 5px;
+  transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
 }

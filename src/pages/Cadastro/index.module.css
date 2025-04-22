@@ -1,71 +1,120 @@
-/* arrow up */
-.irTopo {
-  width: 40px;
-  height: 40px;
-  right: 10px;
-  bottom: 10px;
-  position: fixed;
-  color: green;
-}
-/* Estilização do conteudo da pagina */
+/* Importando variáveis globais */
+@import "../../styles/_variables.css";
+
+/* Conteudo principal */
 .content {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
+  gap: 15px;
 }
-/* estilização do menu */
+
+/* Menu */
 nav {
-  flex: 10%;
+  flex: 1;
+  min-width: 150px; /* Evita que fique muito pequeno */
 }
+
 ul {
   list-style: none;
   padding: 0;
 }
 
 li {
-  border-bottom-color: black;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom: 1px solid var(--dark-color);
   width: 100%;
   padding: 10px;
   margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 li:hover {
-  background-color: lightblue;
+  background-color: var(--hover-color);
 }
-/* estilização padrao do menu, formulario e seção do conteudo da pagina  */
+
+/* Estrutura das seções */
 nav,
 main,
 section {
-  border-color: black;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid var(--dark-color);
   border-radius: 5px;
   margin: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 
-/* estilização do formulario */
+/* Formulário */
 main {
-  flex: 60%;
+  flex: 3;
 }
 
-.form > button {
+.cadastroForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Botões */
+.btn-primary {
   padding: 10px;
   border-radius: 10px;
-  background-color: #1e8f2f;
+  background-color: var(--button-color);
   font-weight: 700;
   font-size: 1rem;
   color: white;
   font-family: "Courier New", Courier, monospace;
+  border: none;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.button:hover {
+.btn-primary:hover {
   cursor: pointer;
+  background-color: var(--hover-button-color);
+  transform: scale(1.05);
 }
-/* estilização da seçao */
+
+/* Seção lateral */
 section {
-  flex: 20%;
+  flex: 1;
+}
+
+/* Arrow Up */
+.irTopo {
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+  color: var(--primary-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.irTopo:hover {
+  transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav,
+  main,
+  section {
+    width: 90%;
+  }
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 480px) {
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .content {
+    gap: 10px;
+  }
 }

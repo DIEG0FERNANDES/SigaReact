@@ -1,0 +1,8 @@
+:root {
+  --primary-color: #1e8f2f;
+  --dark-color: #333;
+  --hover-color: lightblue;
+  --button-color: #007bff;
+  --hover-button-color: #0056b3;
+  --font-family: "Inter", sans-serif;
+}
