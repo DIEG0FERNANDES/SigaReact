@@ -1,0 +1,26 @@
+body {
+  input,
+  select {
+    padding: 5px;
+    border-radius: 10px;
+  }
+  form {
+    > p::before {
+      content: "*";
+      color: red;
+    }
+    p {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      unicode-bidi: isolate;
+    }
+    /* Estilização do botão Eye */
+    .senha1,
+    .senha2 {
+      margin-left: 5px;
+    }
+  }
+}

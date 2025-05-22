@@ -1,25 +1,24 @@
 import { IoEye, IoEyeOff } from "react-icons/io5";
-import "./Header.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import "./index.scss";
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Header = (props: { titulo: string }) => {
+const header = (props: { titulo: string }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Evita o comportamento padrão do formulário
-    navigate("/Home"); // Redireciona para a rota '/Home'
+    e.preventDefault();
+    navigate("/home");
   };
-
   return (
     <header>
-      <h2>Sistema Acadêmico {props.titulo}</h2>
+      <h1>Sistema Acadêmico{props.titulo}</h1>
       {location.pathname === "/" && (
         <form className="login" onSubmit={handleSubmit}>
           <input type="email" placeholder="e-mail" name="email" />
-          <input type="password" placeholder="senha" id="senha3" name="senha" />
+          <input type="password" placeholder="senha" name="senha" />
           <button
             className="senhaButton"
             type="button"
@@ -34,4 +33,4 @@ const Header = (props: { titulo: string }) => {
   );
 };
 
-export default Header;
+export default header;

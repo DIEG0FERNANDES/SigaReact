@@ -1,6 +1,7 @@
-export { default as Botao } from "./Botao";
-export { default as Celula } from "./Celula";
-export { default as Footer } from "./Footer";
-export { default as Header } from "./Header";
-export { default as InputSenha } from "./InputSenha";
-export { default as Tabuleiro } from "./Tabuleiro";
+// exportação de components layouts
+export { default as Header } from "./layouts/header";
+export { default as Footer } from "./layouts/footer";
+
+// exportação de components ui
+export { default as Nav } from "./ui/nav";
+export { default as IrTopo } from "./ui/irTopo";

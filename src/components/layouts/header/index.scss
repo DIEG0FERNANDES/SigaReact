@@ -1,0 +1,33 @@
+header {
+  background-color: #0a5517;
+  background-image: radial-gradient(#19882c, #025310);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-width: 1px;
+  border-style: solid;
+  height: 173.875px;
+  width: 100%;
+  padding: 20px 0;
+
+  h1 {
+    padding: 5px;
+  }
+
+  .login {
+    align-self: flex-end;
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+  // estilização do botão eye
+  .senhaButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 5px;
+    transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+  }
+}

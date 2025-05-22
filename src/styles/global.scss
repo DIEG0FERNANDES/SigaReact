@@ -1,0 +1,81 @@
+@use "variables" as vars;
+@use "mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: vars.$font-family;
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    nav,
+    main,
+    section {
+      border-color: black;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 5px;
+    }
+
+    nav {
+      flex: 10%;
+    }
+
+    main {
+      flex: 60%;
+    }
+
+    section {
+      flex: 20%;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      border-bottom-color: black;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      &:hover {
+        background-color: lightblue;
+      }
+    }
+  }
+
+  .irTopo {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  }
+  button {
+    background-color: vars.$button-color;
+    border-radius: 10px;
+    border: 1px black solid;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    padding: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .senha1,
+  .senha2 {
+    all: unset;
+  }
+}
